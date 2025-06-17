@@ -1,0 +1,21 @@
+{
+  "POST - api/products": {
+    "name": "Dragon's killer",
+    "description": "The sword of Guts",
+    "price": 100,
+    "userId": "67fd372651eebb516fb38ed5"
+  },
+
+  "PUT - api/users/{id}": {
+    "id": "67fd372651eebb516fb38ed5",
+    "name": "Guts",
+    "password": "casca",
+    "email": "momo@gmail.com",
+    "role": "USER"
+  },
+
+  "POST - api/auth/login": {
+    "email": "momo@gmail.com",
+    "password": "casca"
+  }
+}
