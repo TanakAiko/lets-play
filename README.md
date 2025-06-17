@@ -1,4 +1,4 @@
-# Bakcup API
+# lets-play
 
 A secure REST API built with Spring Boot, featuring JWT authentication, MongoDB integration, and comprehensive user and product management capabilities.
 
@@ -34,7 +34,7 @@ A secure REST API built with Spring Boot, featuring JWT authentication, MongoDB 
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd bakcup-api
+   cd lets-play
    ```
 
 2. **Configure MongoDB**
@@ -204,30 +204,6 @@ Run tests with:
 ```bash
 ./mvnw test
 ```
-
-## 🚀 Deployment
-
-The application is configured for production deployment with:
-- SSL/HTTPS support
-- MongoDB Atlas integration
-- Environment-specific configurations
-- Comprehensive error handling
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For support and questions, please contact the development team or create an issue in the repository.
 
 ---
 
