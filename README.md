@@ -66,21 +66,7 @@ The application creates default users on startup:
 
 ### Login Process
 1. **POST** `/api/auth/login`
-   ```json
-   {
-     "email": "momo@gmail.com",
-     "password": "casca"
-   }
-   ```
-
-2. **Response**
-   ```json
-   {
-     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-   }
-   ```
-
-3. **Use the token** in subsequent requests:
+2. Use the returned JWT token in subsequent requests:
    ```
    Authorization: Bearer <your-jwt-token>
    ```
@@ -113,41 +99,48 @@ The application creates default users on startup:
 | PUT | `/api/products/{id}` | Update product | Owner or Admin |
 | DELETE | `/api/products/{id}` | Delete product | Owner or Admin |
 
-## 📝 Request Examples
+## 📝 Request Body Examples
 
-### Register a new user
-```bash
-curl -X POST https://localhost:8080/api/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "John Doe",
-    "email": "john@example.com",
-    "password": "password123"
-  }'
+### Login
+```json
+{
+  "email": "momo@gmail.com",
+  "password": "casca"
+}
 ```
 
-### Create a product
-```bash
-curl -X POST https://localhost:8080/api/products \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <your-token>" \
-  -d '{
-    "name": "Dragon'\''s killer",
-    "description": "The sword of Guts",
-    "price": 100
-  }'
+### Register User
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123"
+}
 ```
 
-### Update user information
-```bash
-curl -X PUT https://localhost:8080/api/users/{id} \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <your-token>" \
-  -d '{
-    "name": "Guts",
-    "email": "momo@gmail.com",
-    "password": "casca"
-  }'
+### Create Product
+```json
+{
+  "name": "Dragon's killer",
+  "description": "The sword of Guts",
+  "price": 100
+}
+```
+
+### Update User
+```json
+{
+  "name": "Guts",
+  "email": "momo@gmail.com",
+  "password": "casca"
+}
+```
+
+### Update User Role (Admin only)
+```json
+{
+  "role": "ADMIN"
+}
 ```
 
 ## 🔒 Security Features
