@@ -54,11 +54,12 @@ public class ProductServiceImpl implements ProductService {
         Product updateProduct = productRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found"));
 
-        User user = userRepository.findById(updateProduct.getUserId())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
-
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String userId = (String) auth.getPrincipal();
+
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
+
         if (!updateProduct.getUserId().equals(userId) && user.getRole() != Role.ADMIN) {
             System.out.println("403-Forbidden (from updateProduct)");
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Can't update other's product");
