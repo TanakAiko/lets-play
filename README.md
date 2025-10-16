@@ -1,8 +1,19 @@
+<div align="center">
+
+![Java](https://img.shields.io/badge/Java-orange?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=spring-security&logoColor=white)
+
+</div>
+
 # lets-play
 
 A secure REST API built with Spring Boot, featuring JWT authentication, MongoDB integration, and comprehensive user and product management capabilities.
 
-## 🚀 Features
+## ✨ Features
 
 - **JWT Authentication**: Secure token-based authentication system
 - **User Management**: Complete CRUD operations for users with role-based access control
@@ -198,6 +209,26 @@ Run tests with:
 ./mvnw test
 ```
 
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ---
 
 **Note**: This API uses HTTPS by default. Make sure to use `https://` in your requests when running locally.
+
+---
+
+<div align="center">
+
+**⭐ Star this repository if you found it helpful! ⭐**
+
+Made with ❤️ from 🇸🇳
+
+</div>
